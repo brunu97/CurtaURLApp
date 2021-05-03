@@ -7,19 +7,24 @@
     <title>CurtaURL</title>
 </head>
 <body>
-    <div id = "caixa" class="container" style="padding-top: 2%;">
-        <form method="post">
-             <div class="form-group">
-                <h3>URL para reduzir:</h3> <br>
-                <input name="URL" type="text" class="form-control">
-                <br>
-                <p><input type="submit" value="MINIATURIZA!" class="btn btn-primary"></p>
-                {% if nova_url %}
-                <span>Ultima URL Gerada: {{ nova_url }}</span>
-                {% endif %}
-             </div>
-        </form>
-    </div>
+        <div class="container" style="padding-top: 2%;">
+            <form method="post">
+                <div id="caixa" class="form-group">
+                    <h3>URL para reduzir:</h3> <br>
+                    <input name="URL" type="text" class="form-control">
+                    <br>
+                    <p><input type="submit" value="MINIATURIZA!" class="btn btn-primary"></p>
+                    {% if nova_url %}
+                        <span>Ultima URL Gerada: {{ nova_url }}</span>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+        
+    <footer class="bg-primary">
+        Bruno Silva 2021 - <u><a class="btn-primary stretched-link"href="https://github.com/brunu97/CurtaURLApp">CurtaURL GitHub</a></u>
+    </footer>
+    
 
 </body>
 </html>

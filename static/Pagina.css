@@ -1,12 +1,17 @@
 #caixa {
-	left: 50%;
-	transform: translate(-50%, 0);
-	position: fixed;
-    margin: 100px auto;
-	font-size: 15px;
-	margin-bottom: 15px;
-	border-radius: 10px;
-	padding: 80px;
     filter: drop-shadow(0px 8px 6px rgba(39, 61, 82, 0.161));
 	padding-bottom: 2%;
+	padding-top: 8%;
 }
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	color: white;
+	text-align: center;
+ }
+  
+  
