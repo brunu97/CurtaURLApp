@@ -31,9 +31,9 @@ def index():
 
 @app.route('/l<string:lnk>', methods=['GET'])
 def link(lnk):
-    try:
+    if lnk in LISTA_URLS:
         return redirect(LISTA_URLS[lnk])
-    finally:
+    else:
         return redirect(url_for('naoEcontrado'))
 
 
@@ -43,4 +43,4 @@ def not_found(e):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=False)
