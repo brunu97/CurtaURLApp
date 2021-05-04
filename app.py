@@ -4,12 +4,12 @@ import uuid
 
 app = Flask(__name__)
 hashids = Hashids(min_length=4, salt=str(uuid.uuid1()))
-app.secret_key = "1ad1d379a20cb884"
+app.secret_key = "1ad7d379a20cb894w"
 LISTA_URLS = {}
 
 
 @app.route('/erro', methods=['GET'])
-def naoEcontrado():
+def NaoEncontrado():
     return render_template('erro.html')
 
 
@@ -31,19 +31,16 @@ def index():
 
 @app.route('/l<string:lnk>', methods=['GET'])
 def link(lnk):
-    print("==============================================================================")
-    print("===link==! " + lnk + "||| " + LISTA_URLS[lnk])
-    print("==============================================================================")
     if lnk in LISTA_URLS:
         return redirect(LISTA_URLS[lnk])
     else:
-        return redirect(url_for('naoEcontrado'))
+        return redirect(url_for('NaoEncontrado'))
 
 
 @app.errorhandler(404)
 def not_found(e):
-    return redirect(url_for('naoEcontrado'))
+    return redirect(url_for('NaoEncontrado'))
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
