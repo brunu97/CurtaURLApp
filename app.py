@@ -31,7 +31,9 @@ def index():
 
 @app.route('/l<string:lnk>', methods=['GET'])
 def link(lnk):
-    print("===link==! " + lnk)
+    print("==============================================================================")
+    print("===link==! " + lnk + "||| " + LISTA_URLS[lnk])
+    print("==============================================================================")
     if lnk in LISTA_URLS:
         return redirect(LISTA_URLS[lnk])
     else:
